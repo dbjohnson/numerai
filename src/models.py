@@ -63,8 +63,6 @@ class DummyCoder(object):
 
 class MixedModelKmeans(object):
     def __init__(self, ycol='target', xcols=scoring.float_cols, categorical_col='c1',
-                 # base_estimator=sklearn.linear_model.ElasticNetCV,
-                 # base_estimator=sklearn.linear_model.BayesianRidge,
                  base_estimator=functools.partial(sklearn.linear_model.ElasticNetCV, l1_ratio=[.1, .5, .7, .9, .95, .99, 1]),
                  n_princ_comp=8,
                  n_clusters=2):
