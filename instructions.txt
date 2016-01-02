@@ -1,0 +1,59 @@
+http://numer.ai
+
+
+# Numerai Tournament Mechanics
+
+Here we discuss data, tournament evaluation, and payouts.
+
+## Training Data
+
+#### numerai_training_data.csv
+Use this dataset to train your machine learning algorithm. The first fourteen
+columns (`f1` - `f14`) are integer features. Column `c1` is a categorical
+feature, column validation indicates a dataset that you can use to validate
+your model, and target is the binary class you’re trying to predict.
+
+## Tournament Data
+
+#### numerai_tournament_data.csv
+Once you’ve built your model, you can use it to generate probability estimates
+on this new dataset.
+
+## Upload Predictions
+
+You can then upload your predictions, and see how well your model performed
+versus the other tournament participants. The format of your prediction upload
+should be a csv with two columns `t_id` and `probability`.
+
+To upload your predictions, login and click the *Upload Predictions* button on
+the homepage. Your score will appear on the leaderboard.
+
+## Evaluation
+
+To be successful a lot of your predictions need to be correct, and where your
+model shows the most confident predictions, it need to be especially correct
+then. We evaluate your models with the [Area Under The Receiver Operator
+Characteristic Curve measure](https://en.wikipedia.org/wiki/Receiver_operating_characteristic#Area_under_the_curve).
+We only report your AUC score on 1/3rd of the predictions you submit. This
+prevents overfitting.
+
+## Payouts
+
+The leaderboard will change frequently as new predictions are uploaded, and so
+payouts will change too. To receive payment, you need to have placed in the top
+10 when the timer runs out, and furthermore you need to come back to apply your
+model to a new live dataset to claim your prize. We will email you a link to a
+live encrypted dataset to predict on when the timer runs out. You’ll have 24
+hours to use your model to predict on this dataset. By requiring that you upload
+predictions, instead of the code related to your model, we ensure that you can
+retain all intellectual property rights to your model. You never have to tell us
+how you built your model. It’s yours forever, and you can apply your ideas to
+all of our subsequent tournaments, and soon submit your predictions directly to
+our API.
+
+We want you to be able to remain completely anonymous on Numerai. To facilitate
+anonymity, we offer payments in Bitcoin as well as USD.
+
+
+http://numer.ai
+
