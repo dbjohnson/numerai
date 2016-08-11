@@ -8,7 +8,7 @@ The model is very simple:
 4. Separate [ElasicNet CV linear estimators](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.ElasticNetCV.html) for each cluster.
 
 
-At one point I was at the head of the leader board, and mainainted the #2 spot until very near the end of the contest.  The competition organizers then made it clear that final rankings would be based on a separate dataset than that used for the leaderboard; at that point, it became very difficult to gauge how well my solution might do, because my results against the validation set often did not line up well with the data set used for leaderboard position.  In other words, my solution was not generalizing well.
+At one point I was at the head of the leader board, and maintained the #2 spot until very near the end of the contest.  The competition organizers then made it clear that final rankings would be based on a separate dataset than that used for the leaderboard; at that point, it became very difficult to gauge how well my solution might do, because my results against the validation set often did not line up well with the data set used for leaderboard position.  In other words, my solution was not generalizing well.
 
 Rather than trying to maintain leaderboard position, I used n-fold cross validation to try and identify the combination of model parameters that produced the highest average AUC score across the CV sets, while minimizing the spread between highest and lowest scoring sets.  I figured this way, I could have more confidence in how my solution would ultimately perform on the final test set.  I chose to use 8 principle components and 6 k-means derived clusters (see cyan highlights in image below)
 
